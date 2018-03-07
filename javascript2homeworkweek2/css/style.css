@@ -1,0 +1,80 @@
+body {background-color: #79cef6;}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.app {
+	display: flex;
+	flex-direction: row nowrap;
+}
+
+aside {
+	margin-right: 2rem;
+}	
+
+
+
+	aside .searchCnt {
+		margin-top: 3rem;
+	}
+
+main {
+	flex: 1;
+}
+
+#dataDisplay {
+	outline: 1px solid #0087ca;
+	flex: 1;
+	padding: 1rem;
+}
+
+#detailsDisplay {
+	outline: 1px solid #0087ca;
+	flex: 1;
+	max-width: 30rem;
+	padding: 1rem;
+	margin-left: 1rem;
+	background: #f6f6f6;
+	word-wrap: break-word;
+}
+
+.repoItem {
+	display: flex;
+	flex: 1;
+	background: #f6f6f6;
+	color: #0087ca;
+	border: 1px solid #ddd;
+	padding: 4px 10px;
+	margin-bottom: 0.5rem;
+}
+
+.repoLink {
+	display: flex;
+	color: #0087ca;
+	text-decoration: none;
+	margin-left: 1rem;
+}
+
+.repoLink:hover {
+	color: #000;
+	text-decoration: underline;
+}
